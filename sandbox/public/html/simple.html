@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>IPTV Demo</title>
+
+    <!-- Loading Bootstrap -->
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+    <!-- Loading IPTV -->
+    <link rel="stylesheet" href="../css/iptv.min.css" type="text/css">
+</head>
+<script>
+// This should be returned from IPTV service API
+var _src = [
+    // Demo: streaming webm video via CDN
+    { type: "video/webm", src: "http://static.moko365.com/movie/files/tears_of_steel_1080p.webm" },
+];
+</script>
+<body>
+
+<div class="container">
+    <h1 class="mbl">IPTV Samples</h1>
+    <div class="row">
+        <div class="span4">
+            <div class="video-controls video-control-buttons">
+                <ul>
+                    <li class="iptv-button" data-color="red">
+                        <div class="iptv-icon fui-video-24"></div>
+                        <div class="iptv-content">
+                            <h4 class="iptv-button-title">
+                                <strong>Play</strong> Video
+                            </h4>
+                            Play
+                        </div>
+                        <div class="dot red"></div>
+                    </li>
+
+                    <li class="iptv-button" data-color="yellow">
+                        <div class="iptv-icon fui-cross-24"></div>
+                        <div class="iptv-content">
+                        <h4 class="iptv-button-title">
+                        <strong>Pause</strong> Video
+                        </h4>
+                        Pause
+                        </div>
+                        <div class="dot yellow"></div>
+                    </li>
+
+                    <li class="iptv-button" data-color="green">
+                        <div class="iptv-icon fui-menu-24"></div>
+                        <div class="iptv-content">
+                        <h4 class="iptv-button-title">
+                        <strong>Full</strong> Screen
+                        </h4>
+                        Goto Fullscreen
+                        </div>
+                        <div class="dot green"></div>
+                    </li>
+
+                    <li class="iptv-button" data-color="blue">
+                        <div class="iptv-icon fui-man-24"></div>
+                        <div class="iptv-content">
+                        <h4 class="iptv-button-title">
+                        Share with <strong>Friends</strong>
+                        </h4>
+                        Facebook, Twitter
+                        </div>
+                        <div class="dot blue"></div>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- /iptv menu -->
+
+        <div class="span8 demo-video">
+            <video id="iptv_player" class="video-js vjs-default-skin" controls width="620" height="349" poster="../images/video/poster.jpg" data-setup='{"autoplay": false, "preload": "auto"}'></video>
+        </div> <!-- /video -->
+    </div>
+    <h1 class="mbl">Remote Controller</h1>
+    <div class="row remote-row">
+        <div class="span3">
+          <a href="#" class="btn btn-large btn-block btn-danger" data-color="red">Play Video</a>
+        </div>
+        <div class="span3">
+          <a href="#" class="btn btn-large btn-block btn-warning" data-color="yellow">Pause Video</a>
+        </div>
+        <div class="span3">
+          <a href="#" class="btn btn-large btn-block btn-success" data-color="green">Full Screen</a>
+        </div>
+        <div class="span3">
+          <a href="#" class="btn btn-large btn-block btn-info" data-color="blue">Share</a>
+        </div>
+    </div>
+</div> <!-- /container -->
+
+    <!-- Load JS here for greater good =============================-->
+    <!-- SDK -->
+    <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
+    <script src="../js/all.min.js"></script>
+    <script src="../buttons/video.json.js"></script>
+</body>
+</html>

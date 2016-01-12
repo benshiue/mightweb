@@ -1,0 +1,24 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    a.brand(href='/')
+      span
+        img(src='#{cdnServer}/images/moko365/mokoversity-logo_white.png', width='32')
+        | &nbsp;mokoversity
+    .nav-collapse.collapse
+      ul.nav.scroll-nav
+        li: a(href='/course/android') Android
+        li: a(href='/course/ios') iOS
+        li: a(href='/course/html5') HTML5 & Cloud
+        li: a(href='/course/startup') Startup
+        li: a(href='/course/booklog') Booklog
+        li: a(href='/about') 關於
+        if user
+          li: a(href='/account', id='user', data-username='#{user.username}')
+            span.fa.fa-user &nbsp;#{user.username}
+        else
+          li: a(href='/login')
+            span.fa.fa-user &nbsp;登入

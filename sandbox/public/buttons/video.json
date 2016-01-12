@@ -1,0 +1,32 @@
+
+[
+
+{
+	"state": "prepared",
+	"buttons": ["red" : { "title": "Play Video", "state": "play", "callback": videoObj.play() }
+			    "yellow" : { "title": "Pause Video", "state": "pause", "callback": videoObj.pause() }
+			    "green": { "title": null, "state": null, "callback": null }
+			    "blue": { "title": "Share to Friends", "state": null, "callback": videoObj.share() }
+			   ]
+},
+
+{
+	"state": "play",
+	"buttons": ["red" : { "title": "Stop Video", "state": "prepared", "callback": videoObj.stop() }
+			    "yellow" : { "title": "Pause Video", "state": "prepared", "callback": videoObj.pause() }
+			    "green": { "title": "Full Screen", "state": "fullscreen", "callback": videoObj.requestFullScreen() }
+			    "blue": { "title": "Share to Friends", "state": null, "callback": videoObj.share() }
+			   ]
+},
+
+{
+	"state": "fullscreen",
+	"buttons": ["red" : { "title": "Stop Video", "state": "prepared", "callback": videoObj.stop() }
+			    "yellow" : { "title": "Pause Video", "state": "prepared", "callback": videoObj.pause() }
+			    "green": { "title": "Exit FullScreen", "state": null, "callback": videoObj.cancelFullScreen() }
+			    "blue": { "title": "Share to Friends", "state": null, "callback": videoObj.share() }
+			   ]
+},
+
+]
+

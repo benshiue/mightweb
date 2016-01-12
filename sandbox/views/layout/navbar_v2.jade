@@ -1,0 +1,29 @@
+nav.navbar.navbar-inverse.navbar-fixed-top#main-menu(role='navigation', style='opacity: 0.9')
+  .navbar-header
+    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    a.navbar-brand.hidden-xs(href='/')
+      span
+        //img(src='#{cdnServer}/images/moko365/mokoversity-logo_white.png?20140821', width='32')
+        | &nbsp;Oranwind
+    a.navbar-brand.hidden-sm.hidden-md.hidden-lg.pull-left(href='/')
+        img(src='#{cdnServer}/images/oranwind/logo.png?20140821', width='32') 
+  .navbar-collapse.collapse.pull-right
+    ul.nav.navbar-nav
+      li: a(href='/')
+        span.fa.fa-home
+      //-li.dropdown
+      //-  a.dropdown-toggle(data-toggle='dropdown', href='#') 工作坊
+      //-    b.caret
+      //-  ul.dropdown-menu
+      //-    li: a(href='/workshop/web-starter-kit') Web Starter Kit－多屏 App 開發
+      //-    li: a(href='/workshop/ios-app-swift-1') Apple Swift 程式設計－iOS App 新手課程
+      li: a(href='http://www.oranwind.org') Blog
+      li: a(href='#footer') Contact us
+      li: a(href='#aboutus') About us
+      //li: a(href='/about') About us
+      
+         
+      

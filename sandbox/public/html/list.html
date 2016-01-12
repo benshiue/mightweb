@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="css/modern.css">
+    <link rel='stylesheet' href="css/style.css">         
+</head>
+
+<body class="metrouicss">
+<script id="entryTemplate" type="text/x-jquery-tmpl"> 
+                        <div class="theme" data-theme-id="${_id}" onclick="alert('${video_src}');">
+                            <img src="${image}">
+                            <div class="overlay">
+                                <strong>${title}</strong>
+                                ${desc}
+                            </div>
+                        </div>
+</script>    
+    <div class="page">
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1>{{ title }}</h1>
+            </div>
+        </div>
+ 
+        <div class="page-region">
+            <div class="page-region-content">
+                <h2 style="padding-left:20px; display: inline-block"></h2>
+                <span id="hint" class="label warning"></span>
+                <span id="info" class="label info"></span>
+                <div class="hero-unit">
+                    <div class="image-collection">                                          
+                    </div><!-- /image-collection -->
+                </div>
+            </div>
+        </div>
+    </div><!-- /page -->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tmpl.min.js"></script> 
+<script type="text/javascript">
+function listPrograms(json) {
+        $("#entryTemplate").tmpl(json)
+                            .appendTo( ".image-collection" );
+}
+
+function listUserPrograms(id) {
+            $.ajax({
+                type: "GET",
+                url: 'api/list_user_programs',
+                data: 'user_id=' + id,
+                success: function( response ) {
+                    // show hint
+                    $('#info').fadeIn();
+                    $('#info').text('Info: Retriving programs successful.');
+                    // clear form
+                    listPrograms( response );
+                }
+            });
+}
+listUserPrograms(612718132);
+</script>
+</body>
+</html>

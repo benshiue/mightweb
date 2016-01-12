@@ -1,0 +1,33 @@
+/*-------------------------------------------------------------------*/
+/* Mixins
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/* Components
+/*-------------------------------------------------------------------*/
+.slide-page-1 {
+  position: relative;
+  overflow: hidden;
+  background-image: url(/liveapp/horizontal-paged/demo1/slide-page-1.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  -webkit-background-size: 480px 800px;
+  -moz-background-size: 480px 800px;
+  -o-background-size: 480px 800px;
+  background-size: 480px 800px;
+  z-index: 0;
+}
+.hint-swipe {
+  margin-top: 150px;
+  -khtml-opacity: 0.6;
+  -moz-opacity: 0.6;
+  -ms-filter: "alpha(opacity=@percentage)";
+  filter: alpha(opacity=60);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.6);
+  opacity: 0.6;
+}
+.hint-swipe img {
+  width: 300px;
+}

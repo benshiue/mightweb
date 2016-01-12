@@ -1,0 +1,748 @@
+doctype html
+//if lt IE 7 
+  html.ie.ie6(lang='en')  
+//if IE 7 
+  html.ie.ie7(lang='en')  
+//if IE 8 
+  html.ie.ie8(lang='en')  
+// [if (gte IE 9)|!(IE)] <!
+html.no-js(lang='en')
+  // <![endif]
+  head
+    meta(charset='utf-8')
+    title MIGHT GROUP for Start-up
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(name='description', content='MIGHT GROUP for Start-up')
+    meta(name='author', content='Might Electronic Co., Ltd.')
+    meta(property='og:image', content='http://might.cloudapp.net/might/assets/img/loop-logo.png')
+    // Styles
+    link(href='assets/css/bootstrap.css', rel='stylesheet')
+    link(href='assets/css/main.css', rel='stylesheet')
+    // Google Fonts
+    link(href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,700', rel='stylesheet', type='text/css')
+    // IE 9 Fallback
+    //if IE 9
+      link(href='assets/css/ie.css', rel='stylesheet')
+    // HTML5 shim, for IE6-8 support of HTML5 elements and IE Fallback
+    //if lt IE 9
+      script(src='assets/js/html5shiv.js')
+    // Fav and touch icons
+    link(rel='apple-touch-icon-precomposed', sizes='144x144', href='assets/ico/apple-touch-icon-144-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='assets/ico/apple-touch-icon-114-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='assets/ico/apple-touch-icon-72-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', href='assets/ico/apple-touch-icon-57-precomposed.png')
+    link(rel='shortcut icon', href='assets/ico/favicon.png')
+  body#top
+    // NAVBAR
+    .navbar.navbar-fixed-top.navbar-light
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#main-nav')
+            span.sr-only Menu
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html')
+            img(src='assets/img/might-logo.png', alt='Loop Logo')
+            h1.hide Might for startup
+        nav#main-nav.navbar-collapse.collapse(role='navigation')
+          ul.nav.navbar-nav.navbar-right
+            li.active
+              a(href='#top') HOME
+            li
+              a(href='#about') ABOUT US
+            li
+              a(href='#services') WHAT WE DO
+            li
+              a(href='#works') SHOW CASES
+            li
+              a(href='#teams') MEET THE TEAM
+            li
+              a(href='#team') PARTNERS
+            li
+              a(href='#contact') CONTACT US
+    // END NAVBAR
+    // HERO UNIT
+    #hero-unit.hero-unit
+      .slideshow
+        .hero-content.text-center
+          // Hero text
+          #slidecaption.slide-caption
+          .hero-buttons
+            a#btn-about.btn.btn-info.btn-lg(href='#about')
+              i.fa.fa-arrow-circle-o-down
+              |  READ MORE
+            a#btn-contact.btn.btn-primary.btn-lg(href='#contact')
+              i.fa.fa-phone-square
+              |  GET IN TOUCH
+        // Navigation
+    // END HERO UNIT
+    // MAIN CONTENT
+    #main-content.main-content
+      // ABOUT
+      #about.section.about
+        .container
+          .section-heading
+            h2 ABOUT US
+            p A great beginning to know us more
+            hr
+          .section-content
+            .row
+              img.img-left(src='assets/img/about-img.png', alt='About Us')
+              .col-lg-9.col-lg-offset-3
+                h3 Might Electronic specialize in electronic manufacturing services(EMS)
+                p
+                  | "邁特電子創立於1986年，擁有豐富的(EMS)專業電子製造經驗。
+                  | 在台灣和大陸共有4個生產基地，致力於提供客戶從小量
+                  | 生產，到供應商垂直整合的一站式電子製造服務。
+                  | 我們提供的小量多樣生產整合服務，以及長年的生產經驗，
+                  | 將協助您一路從設計驗證、試產、量產到最終出貨。
+                  | 並持續以"To be Your Best EMS Partner"為目標，
+                  | 外加上ISO 9001、ISO14001、TS16949等國際品質認證，
+                  | 使我們成為硬體新創團隊的設計製造首選夥伴"
+      // END ABOUT
+      // SERVICES
+      #services.section.darker.services
+        .container
+          .section-heading
+            h2 邁特一站式服務
+            p 從打樣、設計驗證、小量試產、到量產、出貨，幫你解決從1到100的所有難題
+            hr
+          .section-content
+            .row
+              .col-md-1
+                .service-item
+              .col-md-2
+                .service-item
+                  h3 EVT
+                  h3 工程驗證
+                  img.img-product(src='assets/img/clean-url-100.png', alt='')
+                  span.section-line
+                  p
+                    br
+                    |                                產品原型
+              .col-md-2
+                .service-item
+                  h3 DVT
+                  h3 設計驗證
+                  img.img-product(src='assets/img/fresh-content-100.png', alt='')
+                  span.section-line
+                  p
+                    br
+                    |                                工程樣品
+                    br
+                    |                                機構工具
+                    br
+                    |                                電路設計
+                    br
+                    |                                安規認證
+              .col-md-2
+                .service-item
+                  h3 PVT
+                  h3 小量試產
+                  img.img-product(src='assets/img/competitor-analysis-100.png', alt='')
+                  span.section-line
+                  p
+                    br
+                    |                                試產
+                    br
+                    |                                試驗夾具
+                    br
+                    |                                PCB生產
+                    br
+                    |                                信賴性測試
+              .col-md-2
+                .service-item
+                  h3 MP
+                  h3 量產
+                  img.img-product(src='assets/img/keyword-research-100.png', alt='')
+                  span.section-line
+                  p
+                    br
+                    |                                成品量產
+                    br
+                    |                                良率測試
+                    br
+                    |                                不良分析
+              .col-md-2
+                .service-item
+                  h3 Shipping
+                  h3 出貨
+                  img.img-product(src='assets/img/shipping.png', alt='')
+                  span.section-line
+                  p
+                    br
+                    |                                Fedex
+                    br
+                    |                                DHL
+                    br
+                    |                                UPS
+                    br
+                    |                                空/海運
+              .col-md-1
+                .service-item
+          .container
+            .section-heading
+              .row
+                h2 2 Stages Start-up Service
+                p Stages for Product Development
+                img.img-product(src='assets/img/portfolio/product-step.png')
+        // END SERVICES
+        // CALL TO ACTION
+        #call-to-action.section.call-to-action.most-dark
+          p(data-wow-offset='200') 我們是你新創團隊的一部分
+          p(data-wow-offset='200', style='font-size: 20px; padding')
+            | 有別於其它硬體加速器只能幫你找硬體製造資源，我們本身就是硬體製造商，
+            br
+            | 在台灣大陸有四個生產基地，擁有30年的EMS電子製造經驗。從源頭幫你從生產製造的時間和成本把關。
+            br
+            | 除了減少團隊和代工廠溝通成本，還幫助團隊縮短量產、出貨、產品上市(Time to Productuion, Delivery, Market) 的時間。
+        // END CALL TO ACTION
+        //
+          <div id="services" class="section darker services" >
+          <div class="container">
+          <div class="section-content">
+          <div class="row">
+          <div class="col-md-6" style="background-image:url('assets/img/w1.JPG');">
+          <div class="service-item" >
+          <h3 style="color:white">Time to Production</h3>
+          <span class="section-line"></span>
+          <p style="color:white">
+          <br>
+          市場最低量: 20件訂單! 大廠不願意接的極少量訂單，符合少量多樣的碎裂化物聯網產品趨勢。專為新創團隊量身打造的小量製造服務，讓你更有效率的掌握市場，快速驗證你的新創概念。
+          </p>
+          </div>
+          </div>
+          <div class="col-md-6" style="background-image:url('assets/img/w2.jpg')">
+          <div class="service-item" >
+          <h3 style="color:white">Time to Deliery</h3>
+          <span class="section-line"></span>
+          <p style="color:white">
+          <br>
+          根據統計在Kickstarter上，科技類專案的延遲率高達82%，而且成功率只有7%。因為大部分的硬體新創團隊在成功募資後都無法準時出貨。邁特電子整合小量試產、機構設計、量產到出貨的一站式服務。
+          </p>
+          </div>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-6" style="background-image:url('assets/img/w3.jpg')">
+          <div class="service-item" >
+          <h3 style="color:white">Time to Market</h3>
+          <span class="section-line"></span>
+          <p style="color:white">
+          <br>
+          成功的新創團隊不能只專注在產品研發，並且要能跑在產品發表之前經營粉絲和群眾，提前佈局行銷活動，才能在上市日一舉成功。邁特整合設計+募資+社群平台｢愛魅客｣，和Growth Hack流量成長專家，讓你的產品一飛沖天。
+          </p>
+          </div>
+          </div>
+          <div class="col-md-6" style="background-image:url('assets/img/w4.jpg')">
+          <div class="service-item" >
+          <h3 style="color:white">Time to Success</h3>
+          <span class="section-line"></span>
+          <p style="color:white">
+          <br>
+          新創事業就像跳下懸崖，並且要在落地前組出一台飛機。從Idea到完成Prototype是0到1的過程。之後的1到100，才是新創團隊失敗率最高的階段。邁特電子提供新創團從小量試產、打樣、機構設計驗證、到出貨、行銷的一站式服務。讓你在落地前成功組出一台飛機。
+          </p>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+        #services.section.darker.services
+          .container
+            .section-content
+              .row
+                .col-md-6(style='background-color:dimgrey;background-size:cover')
+                  .service-item
+                    h3(style='color:white') Time to Production
+                    span.section-line
+                    p(style='color:white')
+                      br
+                      |                                市場最低量: 20件訂單! 大廠不願意接的極少量訂單，符合少量多樣的碎裂化物聯網產品趨勢。專為新創團隊量身打造的小量製造服務，讓你更有效率的掌握市場，快速驗證你的新創概念。
+                .col-md-6(style="background-image:url('assets/img/w1.JPG');background-size:cover")
+                  .service-item
+                    h3
+                    span.section-line
+                    p
+                      br
+                      br
+                      br
+                      br
+                      br
+              .row
+                .col-md-6(style="background-image:url('assets/img/w2.jpg');background-size:cover")
+                  .service-item
+                    h3
+                    span.section-line
+                    p
+                      br
+                      br
+                      br
+                      br
+                      br
+                .col-md-6(style='background-color:dimgrey;background-size:cover')
+                  .service-item
+                    h3(style='color:white') Time to Deliery
+                    span.section-line
+                    p(style='color:white')
+                      br
+                      |                                根據統計在Kickstarter上，科技類專案的延遲率高達82%，而且成功率只有7%。因為大部分的硬體新創團隊在成功募資後都無法準時出貨。邁特電子整合小量試產、機構設計、量產到出貨的一站式服務。
+              .row
+                .col-md-6(style='background-color:dimgrey;background-size:cover')
+                  .service-item
+                    h3(style='color:white') Time to Market
+                    span.section-line
+                    p(style='color:white')
+                      br
+                      |                               成功的新創團隊不能只專注在產品研發，並且要能跑在產品發表之前經營粉絲和群眾，提前佈局行銷活動，才能在上市日一舉成功。邁特整合設計+募資+社群平台｢愛魅客｣，和Growth Hack流量成長專家，讓你的產品一飛沖天。
+                .col-md-6(style="background-image:url('assets/img/w3.jpg');background-size:cover")
+                  .service-item
+                    h3
+                    span.section-line
+                    p
+                      br
+                      br
+                      br
+                      br
+                      br
+              .row
+                .col-md-6(style="background-image:url('assets/img/w4.jpg');background-size:cover")
+                  .service-item
+                    h3
+                    span.section-line
+                    p
+                      br
+                      br
+                      br
+                      br
+                      br
+                .col-md-6(style='background-color:dimgrey;background-size:cover')
+                  .service-item
+                    h3(style='color:white') Time to Success
+                    span.section-line
+                    p(style='color:white')
+                      br
+                      |                                新創事業就像跳下懸崖，並且要在落地前組出一台飛機。從Idea到完成Prototype是0到1的過程。之後的1到100，才是新創團隊失敗率最高的階段。邁特電子提供新創團從小量試產、打樣、機構設計驗證、到出貨、行銷的一站式服務。讓你在落地前成功組出一台飛機。
+        // WORKS
+        #works.section.works
+          .section-heading
+            h2 SHOW CASES
+            p The best thing is when our work become part of client success
+            hr
+          .section-content
+            ul.list-inline.work-item-filters
+              li
+                a.active(href='#', data-filter='*') ALL
+            .work-item-wrapper
+              ul.work-item-list.list-col-4
+                li.work-item.design
+                  img(src='assets/img/portfolio/bpoint.jpg', alt='http://www.bpoint.com.tw/tw/products/plug-0')
+                  .image-overlay
+                    a.media-popup(href='assets/img/portfolio/bpoint.jpg', title='Plug 智慧電源管家')
+                      .work-item-info
+                        h3 bPoint Plug
+                        p Plug 智慧電源管家
+                        i.fa.fa-search-plus
+                li.work-item.video
+                  img(src='assets/img/portfolio/aillio.jpg', alt='http://aillio.com/?page_id=9')
+                  .image-overlay
+                    a.media-popup(href='assets/img/portfolio/aillio.jpg', title='Aillio')
+                      .work-item-info
+                        h3 Aillio
+                        p Designed for everyone who loves coffee
+                        i.fa.fa-search-plus
+                li.work-item.ux
+                  img(src='assets/img/portfolio/triskel.jpg', alt='http://www.triskel.me/')
+                  .image-overlay
+                    a.media-popup(href='assets/img/portfolio/triskel.jpg', title='Skyscraper')
+                      .work-item-info
+                        h3 Triskel
+                        p Permite monitorar a postura onde você estiver
+                        i.fa.fa-search-plus
+                li.work-item.photography
+                  img(src='assets/img/portfolio/uhoo.png', alt='http://uhooair.com/')
+                  .image-overlay
+                    a.media-popup(href='assets/img/portfolio/uhoo.png', title='uHoo')
+                      .work-item-info
+                        h3 uHoo
+                        p Your defense against air pollution
+                        i.fa.fa-search-plus
+                li.work-item.design.ux
+                  img(src='assets/img/portfolio/alchema.jpg', alt='https://www.facebook.com/GoAlchema')
+                  .image-overlay
+                    a.media-popup(href='assets/img/portfolio/alchema.jpg', title='Alchema')
+                      .work-item-info
+                        h3 Alchema
+                        p Developing solutions for making wine at home
+                        i.fa.fa-search-plus
+                li.work-item.ui.design
+                  img(src='assets/img/portfolio/exvision.png', alt='http://exvision.co.jp/en/gesture-system')
+                  .image-overlay
+                    a.media-popup(href='assets/img/portfolio/exvision.png', title='Exvision')
+                      .work-item-info
+                        h3 Exvision
+                        p Developing and commercialize high speed computer vision technologies.
+                        i.fa.fa-search-plus
+                li.work-item.photography.ux
+                  img(src='assets/img/portfolio/Ubiquiti.jpg', alt='https://www.ubnt.com/')
+                  .image-overlay
+                    a.media-popup(href='assets/img/portfolio/Ubiquiti.jpg', title='Ubiquiti')
+                      .work-item-info
+                        h3 Ubiquiti
+                        p Work item brief description
+                        i.fa.fa-search-plus
+        // END WORKS
+        // TEAM
+        #teams.section.team
+          .container
+            .section-heading
+              h2 MEET THE TEAM
+              p We are a group of skilled individual, various background with the same purpose
+              hr
+            .section-content
+              .row
+                .col-md-5
+                  .team-member.media
+                    img.media-object.img-circle.pull-left(src='assets/img/Ray.jpg', alt='')
+                    .media-body
+                      h3.media-heading.team-name Ray Tai
+                      strong 客戶開發經理
+                      hr
+                      p 規格確認 、時程掌控、成本分析、疑難雜症
+                .col-md-5.col-md-offset-2
+                  .team-member.media
+                    img.media-object.img-circle.pull-left(src='assets/img/ken.JPG', alt='')
+                    .media-body
+                      h3.media-heading.team-name Ken Huang
+                      strong 專案副理
+                      hr
+                      p 規格確認、時程掌控、成本分析、疑難雜症
+              .row
+                .col-md-5
+                  .team-member.media
+                    img.media-object.img-circle.pull-left(src='assets/img/Vincent.png', alt='')
+                    .media-body
+                      h3.media-heading.team-name Vincent Lo
+                      strong 機構工程師
+                      hr
+                      p 機構件評估 、模具評估、治具設計 、組裝流程設計 
+                .col-md-5.col-md-offset-2
+                  .team-member.media
+                    img.media-object.img-circle.pull-left(src='assets/img/Bagel1.0.png', alt='')
+                    .media-body
+                      h3.media-heading.team-name Bagel Huang
+                      strong 業務
+                      hr
+                      p 客戶服務、商業流程、生產安排、出貨安排
+              .row
+                .col-md-5
+                  .team-member.media
+                    img.media-object.img-circle.pull-left(src='assets/img/seb.jpg', alt='')
+                    .media-body
+                      h3.media-heading.team-name Sebastian Hsieh
+                      strong 行銷專案經理
+                      hr
+                      p 新聞資訊 、產品文案、市場調查 、競爭者分析
+                .col-md-5.col-md-offset-2
+                  .team-member.media
+                    img.media-object.img-circle.pull-left(src='assets/img/James1.png', alt='')
+                    .media-body
+                      h3.media-heading.team-name James Hsieh
+                      strong 業務專案經理
+                      hr
+                      p 規格確認、時程掌控、成本分析、疑難雜症
+              .row
+                .col-md-5
+                  .team-member.media
+                    img.media-object.img-circle.pull-left(src='assets/img/Mos.JPG', alt='')
+                    .media-body
+                      h3.media-heading.team-name Mos Lee
+                      strong 電子工程師
+                      hr
+                      p 電路設計、PCB製作、PCBA製程、測試流程設計
+                .col-md-5.col-md-offset-2
+                  .team-member.media
+                    img.media-object.img-circle.pull-left(src='assets/img/Eric1.png', alt='')
+                    .media-body
+                      h3.media-heading.team-name Eric Lai
+                      strong 品保工程師
+                      hr
+                      p 品質系統制定、認證流程、信賴性測試、不良品分析 
+              .row
+                .col-md-5
+                  .team-member.media
+                    img.media-object.img-circle.pull-left(src='assets/img/Sara1.png', alt='')
+                    .media-body
+                      h3.media-heading.team-name Sara Chen
+                      strong 採購
+                      hr
+                      p 材料採購、材料認證、供應商管理、供應商資源
+                .col-md-5.col-md-offset-2
+                  .team-member.media
+                    img.media-object.img-circle.pull-left(src='assets/img/Daniel.jpg', alt='')
+                    .media-body
+                      h3.media-heading.team-name Daniel Wu
+                      strong 顧問
+                      hr
+                      p 社群經營、電子商務、媒體媒合、資金募集
+        // END TEAM
+        // PARTNERS
+        #team.section.team
+          .container
+            .section-heading
+              h2 Partners
+              p
+              hr
+            .section-content
+              .row
+                .col-md-3
+                  .service-item
+                    img.img-product(src='assets/img/partner 1.png', alt='')
+                    span.section-line
+                .col-md-3
+                  .service-item
+                    img.img-product(src='assets/img/partner 2.jpg', alt='')
+                    span.section-line
+                .col-md-3
+                  .service-item
+                    img.img-product(src='assets/img/partner 3.png', alt='')
+                    span.section-line
+                .col-md-3
+                  .service-item
+                    img.img-product(src='assets/img/partner 4.jpg', alt='')
+                    span.section-line
+              .row
+                .col-md-3
+                  .service-item
+                    img.img-product(src='assets/img/partner 5.png', alt='')
+                    span.section-line
+                .col-md-3
+                  .service-item
+                    img.img-product(src='assets/img/partner 6.png', alt='')
+                    span.section-line
+                .col-md-3
+                  .service-item
+                    img.img-product(src='assets/img/partner 7.png', alt='')
+                    span.section-line
+                .col-md-3
+                  .service-item
+                    img.img-product(src='assets/img/partner 8.png', alt='')
+                    span.section-line
+        //
+          TEAM
+          <div id="team" class="section team">
+          <div class="container">
+          <div class="section-heading">
+          <h2>Partners</h2>
+          <p></p>
+          <hr />
+          </div>
+          <div class="section-content">
+          <div class="col-md-5">
+          <div class="team-member media">
+          <img src="assets/img/metro.png" class="media-object pull-left" alt="" />
+          <div class="media-body">
+          <h3 class="media-heading team-name">美鈦國際Metro Products</h3>
+          <strong>工業設計+製造一體化服務</strong>
+          <hr />
+          <ul class="list-inline">
+          <li><a href="http://www.metroproducts.com.tw/ch/ch_home.html"><i class="fa fa-globe"></i></a></li>
+          <li><a href="https://www.facebook.com/pages/%E7%BE%8E%E9%88%A6%E5%9C%8B%E9%9A%9BMetro-Products-Inc-%E5%B7%A5%E6%A5%AD%E8%A8%AD%E8%A8%88%E8%A3%BD%E9%80%A0%E7%B5%84%E8%A3%9D%E5%85%A8%E7%90%83%E9%81%9E%E9%80%81/120535697972848"><i class="fa fa-facebook"></i></a></li>
+          </ul>
+          </div>
+          </div>
+          </div>
+          <div class="col-md-5 col-md-offset-2">
+          <div class="team-member media">
+          <img src="assets/img/RAPAQ.png" class="media-object pull-left" alt="" />
+          <div class="media-body">
+          <h3 class="media-heading team-name">愛魅客RAPAQ</h3>
+          <strong>創客社群+募資平台</strong>
+          <hr />
+          <ul class="list-inline">
+          <li><a href="http://rapaq.com/"><i class="fa fa-globe"></i></a></li>
+          <li><a href="https://www.facebook.com/rapaq"><i class="fa fa-facebook"></i></a></li>
+          </ul>
+          </div>
+          </div>
+          </div>
+          <div class="col-md-5">
+          <div class="team-member media">
+          <img src="assets/img/labest.png" class="media-object pull-left" alt="" />
+          <div class="media-body">
+          <h3 class="media-heading team-name">倍特國際 LaBest Technology</h3>
+          <strong>電子模組方案提供</strong>
+          <hr />
+          <ul class="list-inline">
+          <li><a href="http://labest.com.tw/"><i class="fa fa-globe"></i></a></li>
+          </ul>
+          </div>
+          </div>
+          </div>
+          <div class="col-md-5 col-md-offset-2">
+          <div class="team-member media">
+          <img src="assets/img/tw.png" class="media-object pull-left" alt="" />
+          <div class="media-body">
+          <h3 class="media-heading team-name">臺灣創新快製媒合中心</h3>
+          <strong>政府新創團隊媒合平台</strong>
+          <hr />
+          <ul class="list-inline">
+          <li><a href="https://www.triplelinkage.com/webpage/index.aspx"><i class="fa fa-globe"></i></a></li>
+          </ul>
+          </div>
+          </div>
+          </div>
+          <div class="col-md-5">
+          <div class="team-member media">
+          <img src="assets/img/ideas.png" class="media-object pull-left" alt="" />
+          <div class="media-body">
+          <h3 class="media-heading team-name">IDEAS Hatch 智造創業加速器</h3>
+          <strong>資策會新創團隊媒合平台</strong>
+          <hr />
+          <ul class="list-inline">
+          <li><a href="http://www.ideas-hatch.com/"><i class="fa fa-globe"></i></a></li>
+          </ul>
+          </div>
+          </div>
+          </div>
+          <div class="col-md-5 col-md-offset-2">
+          <div class="team-member media">
+          <img src="assets/img/makerpro.png" class="media-object pull-left" alt="" />
+          <div class="media-body">
+          <h3 class="media-heading team-name">MakerPro</h3>
+          <strong>Maker社群+教育</strong>
+          <hr />
+          <ul class="list-inline">
+          <li><a href="http://makerpro.cc/"><i class="fa fa-globe"></i></a></li>
+          <li><a href="https://www.facebook.com/groups/makerpro.cc/?fref=ts"><i class="fa fa-facebook"></i></a></li>
+          </ul>
+          </div>
+          </div>
+          </div>
+          <div class="col-md-5">
+          <div class="team-member media">
+          <img src="assets/img/makee_logo.jpg" class="media-object pull-left" alt="" />
+          <div class="media-body">
+          <h3 class="media-heading team-name">Makee.io</h3>
+          <strong>A community marketplace for hardware creators and enthusiasts.</strong>
+          <hr />
+          <ul class="list-inline">
+          <li><a href="http://makee.io/"><i class="fa fa-globe"></i></a></li>
+          <li><a href="https://www.facebook.com/makee.io?ref=ts&fref=ts"><i class="fa fa-facebook"></i></a></li>
+          </ul>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          END TEAM
+        // TESTIMONIAL
+        #testimonial.section.testimonial.parallax
+          .container
+            .flexslider
+              ul.slides
+                li
+                  .testimonial-text
+                    p
+                      i.fa.fa-quote-left.quote-left
+                      | You jump off a cliff and you assemble an airplane on the way down.
+                      i.fa.fa-quote-right.quote-right
+                  .testimonial-author
+                    p.author-name - Reid Hoffman
+                    p.autor-title Founder of LinkedIn.
+        // END TESTIMONIAL
+        // CONTACT
+        #contact.section.contact
+          .section-heading
+            h2 GET IN TOUCH
+            p Now it's time to build a business and relationship
+            hr
+          .section-content
+            //
+              <div class="google-map">
+              <div id="map-canvas"></div>
+              </div>
+            .contact-info
+              .container
+                .row
+                  .col-md-6
+                    i.fa.fa-map-marker
+                    h3 Address
+                    p 台灣新竹縣竹北市新泰路31號5樓之1
+                  .col-md-6
+                    i.fa.fa-envelope
+                    h3 Contact
+                    p
+                      | 03-5530981
+                      br
+                      a(href='mailto:sales@might.com.tw') sales@might.com.tw
+            .login_panel
+              .container
+                .row
+                  .col-md-2
+                  .col-md-8
+                    form#login_form.form-horizontal
+                      .form-group
+                        label.col-sm-2.control-label(for='') 姓名
+                        .col-sm-10
+                          input#loing_account.form-control(type='text', name='account_validate', placeholder='姓名')
+                      .form-group
+                        label.col-sm-2.control-label(for='') Email 信箱
+                        .col-sm-10
+                          input#login_password.form-control(type='text', name='password_validate', placeholder='Email 信箱')
+                      .form-group
+                        .col-sm-offset-2.col-sm-10
+                          button#login.btn.btn-primary(type='button') 聯絡我們
+            // login_panel
+        // END CONTACT
+        // TWITTER STREAM
+        #twitter-stream.section.twitter-stream
+          .container
+            .twitter-icon
+              a(href='https://www.facebook.com/might.electronic?fref=ts', data-toggle='tooltip', data-placement='top', title='Facebook')
+                i.fa.fa-facebook
+            .twitter-icon
+              a(href='http://www.might.com.tw/', data-toggle='tooltip', data-placement='top', title='Ｗebsite')
+                i.fa.fa-globe
+            .twitter-icon
+              a(href='https://www.linkedin.com/company/2389285?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A2389285%2Cidx%3A1-1-1%2CtarId%3A1446694816516%2Ctas%3A%E9%82%81%E7%89%B9', data-toggle='tooltip', data-placement='top', title='Linkedin')
+                i.fa.fa-linkedin
+        // END TWITTER STREAM
+      // END MAIN CONTENT
+      // FOOTER
+      footer#footer.section
+        .container
+          p.copyright.pull-left
+            | © 2015. Designed and Coded by 
+            a(href='http://makee.io/') Makee.io
+            |  & 
+            a(href='http://www.might.com.tw/') Might
+          ul.list-inline.pull-right.social-icon
+            .twitter-icon.pull-right
+              a(href='https://www.facebook.com/might.electronic?fref=ts', data-toggle='tooltip', data-placement='top', title='Facebook')
+                i.fa.fa-facebook
+      // END FOOTER
+      .back-to-top
+        a(href='#top')
+          i.fa.fa-chevron-up
+      // JAVASCRIPT
+      script(src='assets/js/jquery-2.1.0.min.js')
+      script(src='assets/js/bootstrap.min.js')
+      script(src='assets/js/jquery.scrollTo-1.4.3.1-min.js')
+      script(src='assets/js/jquery.localscroll-1.2.7-min.js')
+      script(src='assets/js/jquery.easing.min.js')
+      script(src='assets/js/supersized.3.2.7.min.js')
+      script(src='assets/js/supersized.shutter.min.js')
+      script(src='assets/js/jquery.parallax-1.1.3.js')
+      script(src='assets/js/google-map.js')
+      script(src='assets/js/twitter-fetcher.js')
+      script(src='assets/js/imagesloaded.pkgd.js')
+      script(src='assets/js/jquery.isotope.js')
+      script(src='assets/js/wow.js')
+      script(src='assets/js/jquery.flexslider-min.js')
+      script(src='assets/js/jpreloader.min.js')
+      script(src='assets/js/jquery.magnific-popup.js')
+      script(src='assets/js/loop.js')

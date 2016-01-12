@@ -1,0 +1,39 @@
+extends ../layout/default
+
+block fb_meta
+  meta(property='og:site_name', content='Renew City')
+  meta(property='og:title', content='親子工作坊系列－簡單上手 IoT + Maker')
+  meta(property='og:url', content='#{currentURL("")}')
+  meta(property='og:image', content='http://cdn.mokoversity.com/images/logo/mokoversity.png')
+  //- meta(property='article:published_time', content='')
+
+block head
+  title about us
+
+block neck
+
+block feet
+  script(src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c42f932bb56eda')
+  script(src='#{cdnServer}/vendor/add-this/post.js#{cacheBreaker}')
+  //- script(src='#{cdnServer}/views/training/index.js#{cacheBreaker}')
+  script(src='#{cdnServer}/openmind/js/lightbox-2.6.min.js#{cacheBreaker}')
+  script(src='#{cdnServer}/views/subscription/jquery.subscription.js#{cacheBreaker}')
+
+block body
+  section
+    .row
+  section
+    .row
+    .row
+      .col-md-2
+      .col-md-8
+        h1 關於我們
+        h1
+          p 關於 Renew.City
+          p Renew.City 第一個版本於 2015 年 3 月上線。
+          p 我們是一家由 Mokoversity 開放創新學院 農場計畫一期所指導扶持的團隊。延續 MokoVersity 創立目標，Renew.City 也將致力於於打造一個追求開放創新精神及新型態的創客學習、分享、創新產品研發的公司。
+
+          p 第四次的工業革命已經開始，萬物物聯的世界即將發生，的概念。UniVersity 源自 universitas（拉丁文），原意是：community of teachers and scholars。老師與學者的社群，也是聚會場所：每個人都在互相分享與學習。這正是 MokoVersity 的精神。
+
+          p MokoVersity 代表著：我們想打造一個移動通訊新時代的圓夢學校。Logo 更代表著，一起拉起圓夢的弓，射向遠方的目標。
+     

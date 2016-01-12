@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>MokoVersity</title>
+
+    <!-- Loading Layer 0 -->
+    <link rel="stylesheet" href="../css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+    <!-- Loading Layer 1 -->
+    <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../css/flat-ui.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+    <!-- Loading Layer 2 -->
+    <link rel="stylesheet" href="../css/course-ui.css" type="text/css">
+</head>
+<body>
+
+<div class="container">
+  <div class="masthead">
+    <h3 class="muted">MokoVersity</h3>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li class="active"><a href="#" class="">Home</a></li>
+            <li><a href="#" class="">HTML5 Camp</a></li>
+            <li><a href="#" class="">Android Camp</a></li>
+            <li><a href="#" class="">Startup Camp</a></li>
+            <li><a href="#" class="">關於</a></li>
+            <li><a href="#" class="">連絡</a></li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+  </div>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <div class="row course-control">
+        <div class="span6">
+            <video id="iptv_player" class="video-js vjs-default-skin" controls width="560" height="420" poster="http://i.imgur.com/FpghpQ1.png" data-setup='{"autoplay": false, "preload": "auto"}'>
+            <track kind="subtitles" src="http://go8panel.com:3000/api/list_notes?program_id=12345" srclang="zh" label="Show Notes" />
+            </video>
+        </div> <!-- /video -->
+        <div class="span4">
+           <table class="table table-striped">
+            <tr>
+              <td>講師</td>
+              <td>Jollen Chen</td>
+            </tr>
+             <tr>
+              <td>主題</td>
+              <td>1.1 Android Service Concepts</td>
+            </tr>
+             <tr>
+              <td>長度</td>
+              <td>4:13</td>
+            </tr>
+             <tr>
+              <td>分類</td>
+              <td>Android Camp</td>
+            </tr>
+             <tr>
+              <td>筆記</td>
+              <td>目前總共有 3 份筆記</td>
+            </tr>
+          </table>
+          <!-- notes -->
+          <div class="demo-popovers">
+            <div class="popover right">
+              <div class="arrow"></div>
+              <h3 class="popover-title">別人的筆記</h3>
+              <div class="popover-content">
+                <p>推薦使用以下的筆記搭配本課程</p>
+                <div class="fb-login" id="fb-root">
+                <fb:login-button show-faces="true" max-rows="1"></fb:login-button>
+                </div>
+                <p id="submitNoteHint">要登入 Facebook 才能用筆記功能喔！</p>
+                <p id="doneNoteHint">你剛剛成功貼好一個筆記了，可以倒帶回去看喔！</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <!-- end of notes-->
+
+          <!-- control -->
+         <div class="video-controls video-control-buttons"></div>
+          <!-- end of video control -->
+
+        </div>
+    </div>
+
+    <div class="row" id="noteArea">
+        <div class="span8">
+          <div class="control-group huge">
+            <div class="input-prepend">
+              <span class="add-on">@</span>
+              <input class="span8 video-note" type="text" placeholder="寫筆記">
+            </div>
+          </div>
+        </div>
+        <div class="span2">
+            <div id="submitNote" class="btn btn-large btn-success" onClick="myVideoNote()" data-color="blue">貼筆記</div>
+        </div>
+    </div>
+
+  </div>
+
+  <!-- Example row of columns -->
+  <div class="row-fluid">
+    <div class="span4">
+      <a href="#fakelink" class="btn btn-small">
+        <h2 class="">筆記開關</h2>
+        <p class="">使用開關，可以打開或關閉筆記功。關閉時，筆記不會同步顯示。</p>
+        <input type="checkbox" checked data-toggle="switch" />
+      </a>
+    </div>
+    <div class="span4">
+      <a href="#fakelink" class="btn btn-small">
+        <h2 class="">字幕開關</h2>
+        <p class="">使用開關，可以打開或關閉筆記功。關閉時，筆記不會同步顯示。</p>
+        <input type="checkbox" checked data-toggle="switch" />
+      </a>
+   </div>
+    <div class="span4">
+      <a href="#fakelink" class="btn btn-small">
+        <h2 class="">畫筆開關</h2>
+        <p class="">使用開關，可以打開或關閉筆記功。關閉時，筆記不會同步顯示。</p>
+        <input type="checkbox" checked data-toggle="switch" />
+      </a>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row-fluid">
+    <div class="span4">
+      <h2 class="">貼筆記</h2>
+      <p class="">上課中可以隨時在影片上貼筆記喔。只要用 Facebook 帳號登入，即可使用。</p>
+      <p><a class="btn" href="#">看示範 »</a></p>
+    </div>
+    <div class="span4">
+      <h2 class="">分享筆記</h2>
+      <p class="">使用網友分享的筆記上課，互相交換課程筆記。需要 Facebook 帳號。</p>
+      <p class=""><a class="btn" href="#">這個功能還沒開放</a></p>
+   </div>
+    <div class="span4">
+      <h2 class="jetstrap-highlighted">下載影片</h2>
+      <p class="">你可以下載影片到自已的電腦，應用在研究報告、教學等非營利用途。</p>
+      <p><a class="btn" href="#">下載說明 »</a></p>
+    </div>
+  </div>
+
+</div> <!-- /container -->
+
+<div class="row">
+  <p></p>
+</div>
+
+<div class="bottom-menu bottom-menu-large mbl">
+  <div class="container">
+    <div class="row">
+      <div class="span2 brand">
+        <a href="#fakelink" class="fui-flat"></a>
+      </div>
+
+      <div class="span2">
+        <h5 class="title">關於我們</h5>
+        <ul class="bottom-links">
+          <li><a href="#fakelink">Press Release</a></li>
+          <li><a href="#fakelink">Media News</a></li>
+          <li><a href="#fakelink">Team</a></li>
+        </ul>
+      </div>
+
+      <div class="span2">
+        <h5 class="title">課程研習營</h5>
+        <ul class="bottom-links">
+          <li><a href="#fakelink">HTML5 Camp</a></li>
+          <li><a href="#fakelink">Android Camp</a></li>
+          <li><a href="#fakelink">Startup Camp</a></li>
+        </ul>
+      </div>
+
+      <div class="span2">
+        <h5 class="title">熱門推薦課程</h5>
+        <ul class="bottom-links">
+          <li><a href="#fakelink">What's AOSP</a></li>
+          <li><a href="#fakelink">Android 架構介紹</a></li>
+          <li><a href="#fakelink">Android 編譯環境</a></li>
+        </ul>
+      </div>
+
+      <div class="span2">
+        <h5 class="title">Follow Us</h5>
+        <ul class="bottom-links">
+          <li><a href="#fakelink">Facebook</a></li>
+          <li><a href="#fakelink">Twitter</a></li>
+          <li><a href="#fakelink">Youtube</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p class="">© Moko365 2013</p>
+    </div>
+  </div>
+</div> <!-- /bottom-menu /large -->
+
+
+<style>
+
+  body {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+
+  /* Custom container */
+  .container {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  .container > hr {
+    margin: 60px 0;
+  }
+
+  /* Main marketing message and sign up button */
+  .jumbotron {
+    margin: 80px 0;
+    text-align: center;
+  }
+  .jumbotron h1 {
+    font-size: 100px;
+    line-height: 1;
+  }
+  .jumbotron .lead {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+  .jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+
+  /* Supporting marketing content */
+  .marketing {
+    margin: 60px 0;
+  }
+  .marketing p + h4 {
+    margin-top: 28px;
+  }
+
+
+  /* Customize the navbar links to be fill the entire space of the .navbar */
+  .navbar .navbar-inner {
+    padding: 0;
+  }
+  .navbar .nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+  }
+  .navbar .nav li {
+    display: table-cell;
+    width: 1%;
+    float: none;
+  }
+  .navbar .nav li a {
+    font-weight: bold;
+    text-align: center;
+    border-left: 1px solid rgba(255,255,255,.75);
+    border-right: 1px solid rgba(0,0,0,.1);
+  }
+  .navbar .nav li:first-child a {
+    border-left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .navbar .nav li:last-child a {
+    border-right: 0;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .course-control {
+    margin-top: -30px;
+    margin-bottom: 20px;
+  }
+
+  #noteArea {
+    display: none;
+  }
+
+  #doneNoteHint {
+    display: none;
+  }
+</style>
+
+
+
+<!-- Basic Runtime: Layer 1 -->
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="../js/jquery.ui.touch-punch.min.js"></script>
+<script src="../js/bootstrap-select.js"></script>
+<script src="../js/bootstrap-switch.js"></script>
+<script src="../js/flatui-checkbox.js"></script>
+<script src="../js/flatui-radio.js"></script>
+<script src="../js/jquery.tagsinput.js"></script>
+<script src="../js/jquery.placeholder.js"></script>
+<script src="../js/jquery.stacktable.js"></script>
+<script src="../js/application.js"></script>
+
+<!-- Load JS here for greater good =============================-->
+<script src="../js/h762plus.prototype.js" type="text/javascript"></script>
+<script src="../js/video.js"></script>
+<script src="../js/qrcode.js"></script>
+
+<!-- SDK -->
+<script src="../js/jquery.videoplayer.js" type="text/javascript"></script>
+
+<script>
+
+// This should be returned from IPTV service API
+var _src = [
+    // Demo: streaming mpeg4 video through Amazon Cloud
+    //{ type: "video/mp4", src: 'http://static.moko365.com/movie/files/AndroidServiceConcept.m4v' },
+    { type: "video/mp4", src: 'http://static.moko365.com/movie/files/AndroidHALConcepts.m4v' },
+];
+
+var fb_token;
+var fb_user_id;
+
+window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+        appId      : '170451109788607',    // App ID from the app dashboard
+        // 182843335096678 , 170451109788607
+        // channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel file for x-domain comms                status     : true,               // Check Facebook Login status
+        xfbml      : true                // Look for social plugins on the page
+    });
+
+    FB.Event.subscribe('auth.authResponseChange', function(response) {
+        if (response.status === 'connected') {
+            fb_token = response.authResponse.accessToken;
+            FB.api('/me', function(response) {
+                fb_user_id = response.id;
+                $('#noteArea').fadeIn('slow');
+                $('#submitNoteHint').fadeOut('slow');
+            });
+        } else if (response.status === 'not_authorized') {
+            // In this case, the person is logged into Facebook, but not into the app.
+            FB.login();
+        } else {
+            // In this case, the person is not logged into Facebook.
+            FB.login();
+        }
+    });
+};
+
+// Load the SDK asynchronously
+(function(d){
+    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement('script'); js.id = id; js.async = true;
+    js.src = "//connect.facebook.net/en_US/all.js";
+    ref.parentNode.insertBefore(js, ref);
+}(document));
+</script>
+<!-- application -->
+<script src="../buttons/course.json.js"></script>
+<script src="../js/main_default.js"></script>
+</body>
+</html>

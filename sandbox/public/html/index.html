@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../css/modern.css">
+    <style>
+    body {
+      padding: 10px;
+    }
+
+    .fb-login {
+        padding-left: 20px;
+    }
+
+    .theme {
+        cursor: pointer;
+    }
+
+    #hint, #info, .form-components {
+        display: none;
+    }
+    </style>
+</head>
+<body class="metrouicss">
+<script id="entryTemplate" type="text/x-jquery-tmpl">
+    <div class="theme" data-theme-id="${_id}" onclick="alert('${video_src}');">
+        <img src="${image}">
+        <div class="overlay">
+            <strong>${title}</strong>
+            ${desc}
+        </div>
+    </div>
+</script>
+
+<!-- List user programs -->
+    <div class="page">
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1>Create a TV program</h1>
+            </div>
+        </div>
+
+        <div class="page-region">
+            <div class="page-region-content">
+                <h2 style="padding-left:20px; display: inline-block">My Programs</h2>
+                <h2 style="padding-left:20px; display: inline-block"></h2>
+                <span id="hint" class="label warning"></span>
+                <span id="info" class="label info"></span>
+                <div class="hero-unit">
+                    <div class="image-collection" id="list-user-programs">
+                    </div><!-- /image-collection -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Create a TV program -->
+    <div class="page">
+        <div class="page-region">
+            <div class="page-region-content">
+                <h2 style="padding-left:20px; display: inline-block">Create a TV program</h2>
+                <span id="hint" class="label warning"></span>
+                <span id="info" class="label info"></span>
+                <div class="hero-unit">
+                    <form id="program_form">
+                    <div class="image-collection">
+                        <div class="theme" data-theme-id="1">
+                            <img src="../images/1.jpg">
+                            <div class="overlay">
+                                <strong>Default theme</strong>
+                                Normal display screen, not bring to fullscreen automatically
+                            </div>
+                        </div>
+                        <div class="theme" data-theme-id="2">
+                            <img src="../images/2.jpg">
+                            <div class="overlay">
+                                <strong>Fullscreen</strong>
+                                Play video at startup and bring to fullscreen after 3 seconds.
+                            </div>
+                        </div>
+                    </div><!-- /image-collection -->
+
+                    <div class="form-components">
+                        <div class="input-control text span4">
+                            Image URL:<input type="url" name="image">
+                        </div>
+                        <div class="input-control text span4">
+                            Title:<input type="text" name="title">
+                        </div>
+                        <div class="input-control text span4">
+                            Author:<input type="text" name="author">
+                        </div>
+                        <div class="input-control text span4">
+                            Description:<input type="text" name="desc">
+                        </div>
+                        <div class="input-control text span4">
+                            Video Source:<input type="text" name="video_src">
+                        </div>
+                        <button id="create_program">Create<i class="icon-enter-2 right"></i></button>
+                    </div>
+                    </form>
+                </div>
+
+                <div class="fb-login">
+                    <!--Below we include the Login Button social plugin. This button uses the JavaScript SDK to-->
+                    <!--present a graphical Login button that triggers the FB.login() function when clicked.-->
+                    <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+                </div><!-- /fb-login -->
+            </div>
+        </div>
+    </div><!-- /page -->
+
+    <div id="fb-root"></div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.tmpl.min.js"></script>
+
+<script type="text/javascript">
+function listPrograms(json) {
+        $("#list-user-programs").empty();
+        $("#entryTemplate").tmpl(json)
+                            .appendTo( "#list-user-programs" );
+}
+
+function listUserPrograms(id) {
+            $.ajax({
+                type: "GET",
+                url: 'api/list_user_programs',
+                data: 'user_id=' + id,
+                success: function( response ) {
+                    // show hint
+                    $('#info').fadeIn();
+                    $('#info').text('Info: Retriving programs successful.');
+                    // clear form
+                    listPrograms( response );
+                }
+            });
+}
+</script>
+<script>
+    var fb_token;
+    var fb_user_id;
+
+    $(function() {
+        $('.theme').on('click', function() {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+                $('.form-components').slideUp();
+            } else {
+                $('.theme').removeClass('selected');
+                $(this).addClass('selected');
+                $('.form-components').slideDown();
+            }
+
+            // hide all tips
+            $('#hint').fadeOut();
+            $('#info').fadeOut();
+        });
+
+        $('#create_program').on('click', function(e) {
+            e.preventDefault();
+
+            if (fb_token === undefined) {
+                $('#hint_create_program').fadeIn();
+                $('#hint_create_program').text('Warn: Please log in before next step.');
+                return;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: 'api/create_user_program',
+                data: $('#program_form').serialize() +
+                    '&theme_id=' + $('.theme.selected').data('theme-id') +
+                    '&fb_user_id=' + fb_user_id +
+                    '&fb_token=' + fb_token,
+                success: function( response ) {
+                    // show hint
+                    $('#info_create_program').fadeIn();
+                    $('#info_create_program').text('Info: Create program successful.');
+                    // clear form
+                    $('.form-components').slideUp();
+                    $('.form-components input').val('');
+                    $('.theme').removeClass('selected');
+
+                    listUserPrograms(fb_user_id);
+                }
+            });
+        });
+    });
+
+    window.fbAsyncInit = function() {
+        // init the FB JS SDK
+        FB.init({
+            appId      : '170451109788607',    // App ID from the app dashboard
+            // channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel file for x-domain comms
+            status     : true,               // Check Facebook Login status
+            xfbml      : true                // Look for social plugins on the page
+        });
+
+        FB.Event.subscribe('auth.authResponseChange', function(response) {
+            if (response.status === 'connected') {
+                $('#hint').fadeOut();
+                fb_token = response.authResponse.accessToken;
+                FB.api('/me', function(response) {
+                    fb_user_id = response.id;
+                    listUserPrograms(fb_user_id);
+                });
+            } else if (response.status === 'not_authorized') {
+                // In this case, the person is logged into Facebook, but not into the app.
+                FB.login();
+            } else {
+                // In this case, the person is not logged into Facebook.
+                FB.login();
+            }
+        });
+    };
+
+    // Load the SDK asynchronously
+    (function(d){
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        ref.parentNode.insertBefore(js, ref);
+    }(document));
+</script>
+</body>
+</html>

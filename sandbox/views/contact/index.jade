@@ -1,0 +1,35 @@
+extends ../layout/default
+
+block fb_meta
+  meta(property='og:site_name', content='Renew City')
+  meta(property='og:title', content='親子工作坊系列－簡單上手 IoT + Maker')
+  meta(property='og:url', content='#{currentURL("")}')
+  meta(property='og:image', content='http://cdn.mokoversity.com/images/logo/mokoversity.png')
+  //- meta(property='article:published_time', content='')
+
+block head
+  title 客服資訊
+
+block neck
+
+block feet
+  script(src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c42f932bb56eda')
+  script(src='#{cdnServer}/vendor/add-this/post.js#{cacheBreaker}')
+  //- script(src='#{cdnServer}/views/training/index.js#{cacheBreaker}')
+  script(src='#{cdnServer}/openmind/js/lightbox-2.6.min.js#{cacheBreaker}')
+  script(src='#{cdnServer}/views/subscription/jquery.subscription.js#{cacheBreaker}')
+
+block body
+  section
+    .row
+  section
+    .row
+    .row
+      .col-md-2
+      .col-md-8
+        h1 客服資訊
+        h1
+          p 服務時間：星期一至星期五，AM9:00~PM6:00
+          p Email：contact@renew.city
+          p 公司地址：100台北市中正區忠孝西路一段33號7樓
+          p Company address: 7F., No.33, Sec. 1, Zhongxiao W. Rd., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)

@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title Page Not Found | #{projectTitle}
+
+  body(style='background-color: #ffffff; color: #000000; margin-left: 30px;', id='top')
+    h1 找不到！這個網頁不存在。
+    p.lead
+    | 現在最好的方法，就是
+    a(href='https://www.mokoversity.com') 回到首頁
+    p.lead
+    | The resource you requested doesn't exist. Please go to&nbsp;
+    a(href='https://www.mokoversity.com') Home
+    | &nbsp;page.
+    pre(style='font-size: 8px; font-family: ') #{text}

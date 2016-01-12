@@ -1,0 +1,237 @@
+extends ../layout/default
+
+block fb_meta
+  meta(property='og:site_name', content='MokoVersity 開放創新學院')
+  meta(property='og:title', content='Web Starter Kit－多屏 App 開發')
+  meta(property='og:url', content='#{currentURL("")}')
+  meta(property='og:image', content='http://cdn.mokoversity.com/images/logo/mokoversity.png')
+  //- meta(property='article:published_time', content='')
+
+block head
+  title Web Starter Kit－多屏 App 開發 | #{projectTitle}
+
+block neck
+
+block feet
+  script(src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c42f932bb56eda')
+  script(src='#{cdnServer}/vendor/add-this/post.js#{cacheBreaker}')
+  //- script(src='#{cdnServer}/views/training/index.js#{cacheBreaker}')
+
+block body
+  section.coming(style='padding-bottom: 70px;')
+    .container
+      .row
+        .col-md-8
+          section.coming-info
+            h1
+              i.fa.fa-refresh.fa-spin
+              | 關於
+              span 工作坊
+            p
+              | 工作坊是 2 天的全程上機課程，由講師指導學員上機實作。在 2 天共計 14 小時的課程裡，密集地吸收課程精華。
+
+  section.container#main
+    .row
+      .col-md-12
+        h2 Web Starter Kit－多屏 App 開發
+        p Responsive Web Design 是製作多屏（Multi-Device）網頁的技術，RWD 能讓網頁同時在 PC、平板與手機等不同的 Screen 上顯示。Web Starter Kit 是 Google 官方出品的工具，它的主要目的就是幫助開發者，製作 Responsive Web Design 的 App 或網頁。
+        a.btn.btn-success(href='#ticket') 購票
+        p.page-header
+    .row
+      .col-md-8
+        div#post(style='margin-top: 30px;')
+          h3 課程介紹
+          ul
+            li 指導學員使用 Web Starter Kit 來製作 RWD 網頁，並製作成手機 App
+            li 指導學員運用基本的設計觀念，製作具有美感的 UI
+          br
+
+          h3 背景知識
+          ul
+            li General HTML5 Knowledge
+          br
+
+          h3 課程主題
+          p Day 1:
+          ul
+            li Web Starter Kit 開發環境介紹
+            li 選擇開發工具
+            li 建立WSK的開發環境
+            li 撰寫第一個 Web App 體驗 Live Reload
+            li 用<meta>來設定裝置來源
+            li 認識各裝置的頁面差異
+            li 使用CSS函數試做不同頁面寬度的表現
+            li 依據網頁內容選擇適當的斷點
+          p Day 2:
+          ul
+            li 行的排列練習
+            li 區塊位移的練習
+            li 文字調整的練習
+            li 隱藏區塊的方法
+            li 主選單的建立與安排方法
+            li 功能選單的建立排列方式
+            li 將選單轉成列表的實做
+            li 綜合使用的練習
+          br
+
+          h3 講師
+          img.img-circle.pull-right(src='#{cdnServer}/images/moko365/Leon.png', width='150')
+          p
+            a(href='https://www.flickr.com/photos/leonlin14/', target='_blank') Leon Lin（林為志）
+          ul
+            li 藝術家，美術設計。藝術作品多為油畫創作。設計作品橫跨空間，平面，Website，UI與UX等領域，偶爾也寫點程式。
+            li Mokoversity 的&nbsp;
+              a(href='/camp/full-stack') Full Stack 全端開發訓練營導師
+          br
+
+          h3 開課時間
+          ul
+            li 日期：2014/8/9、8/10
+            li 時間：09:30~17:30，共計 14 小時
+          br
+
+          h3 教室地點
+          ul
+            li 地點：A+ 創新育成中心
+            li 地址：台北市松山區光復南路 65 號 3 樓
+            li 捷運資訊：捷運國父紀念館站 5 號出口，出站後光復南路往市民大道方向直走，往前步行約 450 公尺
+          br
+          
+          h3 相關資源
+          ul
+            li: a(href='https://developers.google.com/web/starter-kit/', target='_blank') Web Starter Kit Official Site
+            li: a(href='http://www.mokoversity.com/post/%E5%BE%9EGrid%20System%E7%9A%84%E8%AE%8A%E5%8C%96%EF%BC%8C%E4%BE%86%E7%9C%8BWeb%20Starter%20Kit%E8%88%87Bootstrap%E7%9A%84%E4%B8%8D%E5%90%8C%20(1)') 從Grid System的變化，來看Web Starter Kit與Bootstrap的不同 (1)
+            li: a(href='http://www.mokoversity.com/post/%E5%BE%9EGrid%20System%E7%9A%84%E8%AE%8A%E5%8C%96%EF%BC%8C%E4%BE%86%E7%9C%8BWeb%20Starter%20Kit%E8%88%87Bootstrap%E7%9A%84%E4%B8%8D%E5%90%8C%20(2)') 從Grid System的變化，來看Web Starter Kit與Bootstrap的不同 (2)
+            li: a(href='http://www.mokoversity.com/post/%E5%BE%9EGrid%20System%E7%9A%84%E8%AE%8A%E5%8C%96%EF%BC%8C%E4%BE%86%E7%9C%8BWeb%20Starter%20Kit%E8%88%87Bootstrap%E7%9A%84%E4%B8%8D%E5%90%8C%20(3)') 從Grid System的變化，來看Web Starter Kit與Bootstrap的不同 (3)
+          br
+
+      .col-md-4
+        div.well
+          h5 上課需知
+          ul
+            li 請學員自備筆電
+            li 課前請安裝 Web Starter Kit
+
+    section.row#ticket
+      .col-md-12
+        h3 價格
+      .col-md-6
+        //- .pricign-box.animated.fadeInUp.animation-delay-7
+        .pricign-box
+          .pricing-box-header
+              h2 一般票
+            .pricing-box-price
+              h3
+                | NTD$ 3,980
+                sub / 人
+            .pricing-box-content
+              ul
+                li
+                  i.fa.fa-inbox
+                  | 課程：Web Starter Kit －多屏 App 開發
+                li
+                  i.fa.fa-dashboard
+                  | 時間：2014/8/9、8/10，共計 14 小時
+                li
+                  i.fa.fa-sitemap
+                  | 講師：Leon Lin（林為志）主講
+            .pricing-box-footer
+              a.btn.btn-default(href='#ticket') 2014.8.4 日開賣
+      .col-md-6
+        .pricign-box
+          .pricing-box-header
+              h2 早鳥票
+            .pricing-box-price
+              h3
+                | NTD$ 3,580
+                sub / 人
+            .pricing-box-content
+              ul
+                li
+                  i.fa.fa-inbox
+                  | 課程：Web Starter Kit －多屏 App 開發
+                li
+                  i.fa.fa-dashboard
+                  | 時間：2014/8/9、8/10，共計 14 小時
+                li
+                  i.fa.fa-sitemap
+                  | 講師：Leon Lin（林為志）主講
+            .pricing-box-footer
+              a.btn.btn-default(href='#ticket') 現正發售中
+        br
+
+    section.row#ticket
+      .col-md-12
+        h3 線上購票
+      .col-md-12
+        iframe(title='活動通報名表', marginwidth='0', marginheight='0', frameborder='0', border='0', scrolling='no', src='http://www.accupass.com/event/shareregister/1407081420442126662860', width='100%', height='400px')
+
+  script(type='text/template', id='tmpl')
+    section.contacts-3
+      .row
+        .col-md-6.col-md-offset-3.text-center
+          h2 Mokoversity 售票機
+          hr
+      .container(style='width: 80%;')
+        .row
+          .col-sm-5
+            h3 票券名稱
+            p
+              | 您正在購買票券：Android Wear SDK 實例教學
+            hr
+            h3 注意事項
+            p
+              | 1. 票券資訊會以 Email 方式發送，請填寫有效信箱。
+          .col-sm-6.col-sm-offset-1
+            h3 購買人資訊
+            if user
+              form
+                div.alerts
+                  |<% _.each(errors, function(err) { %>
+                  div.alert.alert-error
+                    button.close(type='button', data-dismiss='alert') &times;
+                    |<%= err %>
+                  |<% }); %>
+                  |<% if (success) { %>
+                  h3 報名成功
+                  p 系統已自動發送「驗證碼」至您的手機，
+                    a(href='/account/tickets') 請按這裡完成驗證手續。
+                  |<% } %>
+                |<% if (!success) { %>
+                label.h6 您的中文名字
+                .form-group(class!='<%= errfor.fullname ? "has-error" : "" %>')
+                  input.form-control(type='text', data-code='full-stack-camp', name='fullname', data-pass-id='539eb0faed232eda38000006', data-must='true')
+                br
+
+                label.h6 Email 信箱
+                .form-group(class!='<%= errfor.email ? "has-error" : "" %>')
+                  input.form-control(type='text', data-code='full-stack-camp', name='email', value!='#{userinfo.email}', data-pass-id='539eb0faed232eda38000006', data-must='true')
+                br
+
+                label.h6 手機號碼
+                p 格式範例：0956-590-990
+                .form-group(class!='<%= errfor.mobile ? "has-error" : "" %>')
+                  input.form-control(type='text', data-code='full-stack-camp', name='phone', data-pass-id='539eb0faed232eda38000006', data-must='true')
+                br
+
+                label.h6 公司名稱（或學校名稱）
+                .form-group(class!='<%= errfor.company ? "has-error" : "" %>')
+                  input.form-control(type='text', data-code='full-stack-camp', name='company', data-pass-id='539eb0faed232eda38000006')
+                br
+
+                label.h6 職稱（學生或無職稱者免填）
+                .form-group(class!='<%= errfor.title ? "has-error" : "" %>')
+                  input.form-control(type='text', data-code='full-stack-camp', name='title', data-pass-id='539eb0faed232eda38000006')
+                br
+
+                button.btn.btn-save.btn-primary(type='button') 
+                  | 送出報名表
+                br
+                |<% } %>
+            else
+              p 請先
+                a(href='/login?returnUrl=/events/android-wear-sdk') 登入會員
+                | 。還不是會員？
+                a(href='/signup?returnUrl=/events/android-wear-sdk') 加入會員
+                | 。
+              p 登入會員後，可以更方便地完成報名。

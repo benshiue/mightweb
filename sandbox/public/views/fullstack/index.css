@@ -1,0 +1,26 @@
+.table tr th {
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 25px;
+}
+
+.table tr td {
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.yes-symbol:before {
+	content:"\2714 \0020";
+	color:#46a546;
+	font-size:16px;
+	font-weight:normal;
+	line-height: 25px;
+}
+
+.no-symbol:before {
+	content:"\2718 \0020";
+	color:#f89406;
+	font-size:16px;
+	font-weight:normal;
+	line-height: 25px;
+}

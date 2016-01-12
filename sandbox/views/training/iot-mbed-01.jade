@@ -1,0 +1,180 @@
+extends ../layout/default
+
+block fb_meta
+  meta(property='og:site_name', content='Renew City')
+  meta(property='og:title', content='親子工作坊系列－簡單上手 IoT + Maker')
+  meta(property='og:url', content='#{currentURL("")}')
+  meta(property='og:image', content='http://cdn.mokoversity.com/images/logo/mokoversity.png')
+  //- meta(property='article:published_time', content='')
+
+block head
+  title IoT＋ Maker 創客工作坊 | #{projectTitle}
+
+block neck
+
+block feet
+  script(src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c42f932bb56eda')
+  script(src='#{cdnServer}/vendor/add-this/post.js#{cacheBreaker}')
+  //- script(src='#{cdnServer}/views/training/index.js#{cacheBreaker}')
+  script(src='#{cdnServer}/openmind/js/lightbox-2.6.min.js#{cacheBreaker}')
+  script(src='#{cdnServer}/views/subscription/jquery.subscription.js#{cacheBreaker}')
+
+block body
+  section.coming(style='padding-bottom: 70px;')
+    .container
+      .row
+        .col-md-8
+          section.coming-info
+            h2
+              i.fa.fa-refresh.fa-spin
+              | &nbsp;
+              span IoT 工作坊
+            p 
+              | Maker + IoT：導師指導，自已動手製作 IoT 裝置，並撰寫程式
+
+  section.container#main
+    .row
+      .col-md-12      
+        h2 創客工作坊系列－家用空氣偵測站 
+        p 本課程先帶領大家了解什麼是 IoT 、什麼是 WoT 及 ARM mbed 開發版如何控制 Sensor 元件，透過一系列的創作與實習，帶給大家不一樣的 IoT 技術視野。對於想要學習成為一個 Maker 創造 IoT 相關作品的人來說，是一門很合適的課程。。
+        a.btn.btn-success(href='#ticket') 購票
+        p.page-header
+    .row
+      .col-md-8
+        div#post(style='margin-top: 30px;')
+          h3 課程介紹
+          ul
+            li 指導學員練習撰寫 mbed 程式
+            li 帶你 DIY 一個家用空氣偵測站
+            li 製作 Web 應用程式顯示空氣數據
+          br
+
+          h3 背景知識
+          ul
+            li 能看懂 "hello world" 等級的 C++ 程式碼
+          br
+
+          h3 課程主題
+          p 第 01 堂 進入物聯網
+          ul
+            li 開發工具： ARM mbed 開發環境
+            li 從 IoT 到 WoT
+            li ARM mbed 架構解析
+            li  ARM mbed 開發環境（Online tool、Offline tool、Version control）
+          p 第 02 堂 ARM mbed 入門
+            li  基本電子電路
+            li  ARM mbed pinout
+            li  GPIO APIs 入門
+            li  實驗：控制 LED
+          p 第 03 堂 ARM mbed SDK
+            li C/C++ 基礎
+            li ARM mbed sdk coding style
+            li SDK APIs
+          p 第 04 堂 ARM mbed 實習
+            li  認識 Sensor（使用 Starter Kit for mbed）
+            li  製作 Web 應用程式顯示空氣數據
+            li  實做家用空氣偵測站
+          br
+
+          h3 講師（Instructor）
+          .row
+            .col-md-2
+              img.img-circle(src='/images/renew/coach/james.jpg', width='64', height='64', style='margin-top: 20px;')
+            .col-md-10
+              h4 James
+              p Mokoversity 農場計劃團隊 Renew City 講師
+
+          .row
+            .col-md-2
+              img.img-circle(src='/images/renew/coach/julie.jpg', width='64', height='64', style='margin-top: 20px;')
+            .col-md-10
+              h4 Julie
+              p Mokoversity 農場計劃團隊 Renew City 講師
+
+          br
+
+          h3 開課時間
+          ul
+            li 日期：2015/3/26（平日）
+            li 時間：19:00~21:00，共計 5 小時
+          br
+
+          h3 教室地點
+          ul
+            li 地點：
+            li 地址：
+            li 捷運資訊：
+          br
+
+          h3 相關資源
+          ul
+            li: a(href='https://mbed.tw', target='_blank') mbed Taiwan
+
+          br
+
+      .col-md-4
+        div.well
+          h5 上課需知
+          ul
+            li 請學員自備筆電
+            li 
+            li 
+
+        //- div
+          //- button.btn.btn-primary.btn-lg(data-toggle='modal', data-target='#myModal')
+          //-     | Launch demo modal
+        
+
+    section.row#ticket
+      .col-md-12
+        h3 價格
+      .col-md-6
+        //- .pricign-box.animated.fadeInUp.animation-delay-7
+        .pricign-box
+          .pricing-box-header
+              h2 一般票
+            .pricing-box-price.text-center
+              h4
+                s NTD$ 1080
+                sub / 人
+            .pricing-box-content
+              ul
+                li
+                  i.fa.fa-inbox
+                  | 課程：創客工作坊系列－家用空氣偵測站 
+                li
+                  i.fa.fa-dashboard
+                  | 時間： 共計 5 小時
+                li
+                  i.fa.fa-sitemap
+                  | 講師：James、Julie
+
+      .col-md-6
+        .pricign-box
+          .pricing-box-header
+              h2 首開班優惠
+            .pricing-box-price
+              h3
+                | NTD$ 880
+                sub / 人
+            .pricing-box-content
+              ul
+                li
+                  i.fa.fa-inbox
+                  | 課程：創客工作坊系列－家用空氣偵測站 
+                li
+                  i.fa.fa-dashboard
+                  | 時間：2015/3/26，共計 5 小時
+                li
+                  i.fa.fa-sitemap
+                  | 講師：James、Julie
+                li
+                  i.fa.fa-cloud
+                  | 僅有一次的優惠方案，回饋想學習 mbed 的朋友
+            .pricing-box-footer
+              a.btn.btn-default(href='#ticket') 現正發售中
+        br
+
+  
+
+  

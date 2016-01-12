@@ -1,0 +1,25 @@
+script(src='#{cdnServer}/vendor/jquery/jquery.js')
+script(src='#{cdnServer}/vendor/bootstrap/dist/js/bootstrap.js')
+script(src='#{cdnServer}/js/notify.js')
+script(src='#{cdnServer}/js/notify-bootstrap.js')
+script(src='#{cdnServer}/js/jquery.tagsinput.js')
+script(src='#{cdnServer}/js/jquery.placeholder.js')
+script(src='#{cdnServer}/js/jquery.stacktable.js')
+script(src='#{cdnServer}/js/qrcode.js')
+script(src='#{cdnServer}/vendor/underscore/underscore-min.js')
+script(src='#{cdnServer}/vendor/backbone/backbone-min.js')
+script(src='#{cdnServer}/vendor/momentjs/min/moment.min.js')
+script(src='#{cdnServer}/vendor/showdown/src/showdown.js')
+script(src='#{cdnServer}/layouts/core.js')
+script(src='#{cdnServer}/vendor/medium-editor/dist/js/medium-editor.js')
+script(src='#{cdnServer}/js/google-analytics.js')
+
+#fb-root
+script.
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=581474091904335";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));

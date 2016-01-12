@@ -1,0 +1,111 @@
+.course-control {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+#all-elements {
+  display: block;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -ms-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+  color: rgba(52, 73, 94, 0.95);
+}
+
+.elem-section {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 36px 0 146px;
+  display: block;
+}
+.elem-section h2 {
+  font-size: 58px;
+  line-height: 66px;
+  margin: 0 0 41px;
+}
+.elem-section .holder {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+.elem-section .frame {
+  float: left;
+  display: block;
+}
+
+.elements-nav {
+  float: right;
+  position: relative;
+  top: -225px;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -ms-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  display: block;
+  text-align: center;
+}
+
+#all-elements {
+  height: 500px;
+  overflow: hidden;
+}
+#all-elements:hover .elements-nav {
+  top: -185px;
+}
+
+.item-section {
+  width: 100%;
+  overflow: hidden;
+}
+.item-section .holder {
+  margin: 0 auto;
+}
+
+.item-list {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 25px;
+}
+.item-list svg {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.item-list li {
+  display: inline-block;
+  vertical-align: top;
+  width: 520px;
+  margin: 35px 55px 0 0;
+  opacity: 80%;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.item-list .visual {
+  float: left;
+  width: 148px;
+}
+.item-list .visual img {
+  float: left;
+}
+.item-list .frame {
+  overflow: hidden;
+}
+.item-list h3 {
+  font-size: 22px;
+  line-height: 39px;
+  font-weight: bold;
+  color: #263950;
+  margin: 0 0 2px;
+  opacity: 0.85;
+}

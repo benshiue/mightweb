@@ -1,0 +1,301 @@
+extends ../layout/default
+
+block fb_meta
+  meta(property='og:site_name', content='MokoVersity 開放創新學院')
+  meta(property='og:title', content='Apple Swift 程式設計－iOS App 新手課程')
+  meta(property='og:url', content='#{currentURL("")}')
+  meta(property='og:image', content='http://cdn.mokoversity.com/images/logo/mokoversity.png')
+  //- meta(property='article:published_time', content='')
+
+block head
+  title Apple Swift 程式設計－iOS App 新手課程 | #{projectTitle}
+
+block neck
+
+block feet
+  script(src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c42f932bb56eda')
+  script(src='#{cdnServer}/vendor/add-this/post.js#{cacheBreaker}')
+  //- script(src='#{cdnServer}/views/training/index.js#{cacheBreaker}')
+  script(src='#{cdnServer}/openmind/js/lightbox-2.6.min.js#{cacheBreaker}')
+  script(src='#{cdnServer}/views/subscription/jquery.subscription.js#{cacheBreaker}')
+
+block body
+  section.coming(style='padding-bottom: 70px;')
+    .container
+      .row
+        .col-md-8
+          section.coming-info
+            h1
+              i.fa.fa-refresh.fa-spin
+              | 關於
+              span 工作坊
+            p
+              | 工作坊是 2 天的全程上機課程，由講師指導學員上機實作。在 2 天共計 14 小時的課程裡，密集地吸收課程精華。
+
+  section.container#main
+    .row
+      .col-md-12        
+        h2 Apple Swift 程式設計－iOS App 新手課程
+        img(src='#{cdnServer}/images/gallery/ios-swift-banner.png?20140723_2')
+        p Apple 推出的新程式語言－Swift，並不只是「另一個 Programming Language」，而是具有重要意義的作品。美國財經網站 Motley Fool 的評論稱《蘋果 Swift 將改變一切》。課程介紹 Apple Swift 程式語言的基本語法、入門觀念、語言特色、Lambda Expression 等。上機實習將帶領學員，以 Swift 語言呼叫 UIKit，打造一個 Weather iOS App。
+        a.btn.btn-success(href='#ticket') 購票
+        p.page-header
+    .row
+      .col-md-8
+        div#post(style='margin-top: 30px;')
+          h3 課程介紹
+          ul
+            li 指導學員練習撰寫 Swift 程式
+            li 指導初次使用 iOS SDK 的學員撰寫第一個 iOS App
+            li 學員將在課堂上開發一個 Weather App
+          br
+
+          h3 背景知識
+          ul
+            li 能看懂 "hello world" 等級的 Swift 程式碼
+          br
+
+          h3 課程主題
+          p Day 1：入門與基礎實習
+          ul
+            li 開發工具：Terminal 環境操作、認識 Xcode 開發環境
+            li 上手實習：Swift 基本語法、Playgrounds 操作、Samples
+            li Swift 程式設計 #1：Function
+            li Swift 程式設計 #2：Lambda Expression
+            li 認識 Protocol 與 Delegation
+            li Swift 與 iOS SDK 入門 #1：建立 iOS App 專案
+            li Swift 與 iOS SDK 入門 #2：認識 Storyboard
+            li Swift 與 iOS SDK 入門 #3：認識 View Controller
+            li 認識 Interface Builder #1：IBOutlet
+            li UIKit 入門 #1：使用 UILabel
+            li UIKit 入門 #2：使用影像（UIImageView）
+            li UIKit 入門 #3：NSURLConnection－呼叫 REST API
+            li UIKit 入門 #4：JSON 解析
+          p Day 2：iOS SDK 入門（使用 Swift 程式語言）
+          ul
+            li Swift 程式設計 #3：Class 與 Object
+            li Swift 程式設計 #4：Enum 與 Structure
+            li Swift 程式設計 #5：Object Unwrap
+            li 認識 Interface Builder #2：IBAction
+            li UIKit 入門 #5：從 UITableView
+            li iOS UI Design Guide
+            li 學習製作 Weather App（天氣 App）
+          br
+
+          h3 講師（Instructor）
+          .row
+            .col-md-2
+              img.img-circle(src='#{cdnServer}/images/moko365/jollen-chen.png', width='64', height='64', style='margin-top: 20px;')
+            .col-md-10
+              h4 Jollen
+              p Mokoversity 導師，Moko365 創辦人
+
+          h3 教練（Coach）
+          .row
+            .col-md-2
+              img.img-circle(src='#{cdnServer}/images/moko365/fred.jpg', width='64', height='64', style='margin-top: 20px;')
+            .col-md-10
+              h4 Fred
+              p Mokoversity 導師，Hangee 計畫發起人
+
+          .row
+            .col-md-2
+              img.img-circle(src='#{cdnServer}/images/moko365/Leon.png', width='64', height='64', style='margin-top: 20px;')
+            .col-md-10
+              h4 Leon
+              p Mokoversity 導師，藝術家，美術設計
+          br
+
+          h3 開課時間
+          ul
+            li 日期：2014/8/16、8/17（假日）
+            li 時間：09:30~17:30，共計 14 小時
+          br
+
+          h3 教室地點
+          ul
+            li 地點：A+ 創新育成中心
+            li 地址：台北市松山區光復南路 65 號 3 樓
+            li 捷運資訊：捷運國父紀念館站 5 號出口，出站後光復南路往市民大道方向直走，往前步行約 450 公尺
+          br
+
+          h3 相關資源
+          ul
+            li: a(href='https://developer.apple.com/xcode/', target='_blank') Xcode 下載
+            li: a(href='https://itunes.apple.com/us/book/swift-programming-language/id881256329?mt=11', target='_blank') The Swift Programming Language 電子書
+            li: a(href='http://numbbbbb.gitbooks.io/-the-swift-programming-language-/', target='_blank') The Swift Programming Language 中文版
+
+          br
+
+      .col-md-4
+        div.well
+          h5 上課需知
+          ul
+            li 請學員自備 MacBook Air 或 MacBook Pro 筆電
+            li 須更新至 OS X 10.9.4
+            li 課前請安裝 Xcode6-Beta3 (或更新版本)
+
+        //- div
+          //- button.btn.btn-primary.btn-lg(data-toggle='modal', data-target='#myModal')
+          //-     | Launch demo modal
+        .mind-box.mind-box-primary
+          h4.mind-box-title Reference UI Design
+            i.fa.fa-cloud-download
+            p 不會 UI Design 怎麼辦？課程可以選購 Weather UI 參考設計
+            p 即將發售
+            p
+              a.thumbnail(href='/images/gallery/weather-app-1.png', data-lightbox='captions') 產品預覽 (Preview 版本)
+
+
+    section.row#ticket
+      .col-md-12
+        h3 價格
+      .col-md-6
+        //- .pricign-box.animated.fadeInUp.animation-delay-7
+        .pricign-box
+          .pricing-box-header
+              h2 一般票
+            .pricing-box-price.text-center
+              h4
+                s NTD$ 5,980
+                sub / 人
+            .pricing-box-content
+              ul
+                li
+                  i.fa.fa-inbox
+                  | 課程：Apple Swift 程式設計－iOS App 新手課程
+                li
+                  i.fa.fa-dashboard
+                  | 時間：2014/8/16、8/17，共計 14 小時
+                li
+                  i.fa.fa-sitemap
+                  | 講師：Jollen（主講）、Fred（教練）、Leon（教練）
+
+      .col-md-6
+        .pricign-box
+          .pricing-box-header
+              h2 首開班優惠
+            .pricing-box-price
+              h3
+                | NTD$ 2,980
+                sub / 人
+            .pricing-box-content
+              ul
+                li
+                  i.fa.fa-inbox
+                  | 課程：Apple Swift 程式設計－iOS App 新手課程
+                li
+                  i.fa.fa-dashboard
+                  | 時間：2014/8/16、8/17，共計 14 小時
+                li
+                  i.fa.fa-sitemap
+                  | 講師：Jollen（主講）、Fred（教練）、Leon（教練）
+                li
+                  i.fa.fa-cloud
+                  | 僅有一次的優惠方案，回饋想學習 Swift iOS App 的朋友
+            .pricing-box-footer
+              a.btn.btn-default(href='#ticket') 現正發售中
+        br
+
+  .featurette#subscribe(style='background-color:#efefef; margin-top: 0px; padding-bottom: 75px;')
+    .container
+      .row
+        .col-md-10.col-lg-10.col-xs-10.col-sm-10
+          h3 預約登記
+          p 本課次目前已額滿，想參加的朋友請留下 Email 登記預約。新班次上線後，將會主動寄發通知。預約仍可享有首開班優惠，預約截止日期為：2014.8.8。如有任何不便，敬請見諒。
+          div.input-group
+            input.form-control(type='text', placeholder='輸入 Email 進行預約登記', data-id='53d0e9cf40abdd602d00019b')
+            span.input-group-btn
+              button.btn.btn-default(type='button', data-subscription='submit', data-id='53d0e9cf40abdd602d00019b') 預約登記
+
+  .container
+    section.row#ticket
+      .col-md-12
+        h3 線上購票
+      .col-md-12
+        iframe(title='活動通報名表', marginwidth='0', marginheight='0', frameborder='0', border='0', scrolling='no', src='http://www.accupass.com/event/shareregister/1407230805391722113186', width='100%', height='400px')
+
+  article
+    .row
+      #myModal.modal.fade(role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+          .modal-dialog
+              .modal-content
+                .modal-header
+                  button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                  h4#myModalLabel.modal-title Modal title
+                .modal-body
+                  p
+                    | Section
+                .modal-footer
+                  button.btn.btn-default(type='button', data-dismiss='modal') Close
+                  button.btn.btn-primary(type='button') Save changes
+
+  script(type='text/template', id='tmpl')
+    section.contacts-3
+      .row
+        .col-md-6.col-md-offset-3.text-center
+          h2 Mokoversity 售票機
+          hr
+      .container(style='width: 80%;')
+        .row
+          .col-sm-5
+            h3 票券名稱
+            p
+              | 您正在購買票券：Android Wear SDK 實例教學
+            hr
+            h3 注意事項
+            p
+              | 1. 票券資訊會以 Email 方式發送，請填寫有效信箱。
+          .col-sm-6.col-sm-offset-1
+            h3 購買人資訊
+            if user
+              form
+                div.alerts
+                  |<% _.each(errors, function(err) { %>
+                  div.alert.alert-error
+                    button.close(type='button', data-dismiss='alert') &times;
+                    |<%= err %>
+                  |<% }); %>
+                  |<% if (success) { %>
+                  h3 報名成功
+                  p 系統已自動發送「驗證碼」至您的手機，
+                    a(href='/account/tickets') 請按這裡完成驗證手續。
+                  |<% } %>
+                |<% if (!success) { %>
+                label.h6 您的中文名字
+                .form-group(class!='<%= errfor.fullname ? "has-error" : "" %>')
+                  input.form-control(type='text', data-code='full-stack-camp', name='fullname', data-pass-id='539eb0faed232eda38000006', data-must='true')
+                br
+
+                label.h6 Email 信箱
+                .form-group(class!='<%= errfor.email ? "has-error" : "" %>')
+                  input.form-control(type='text', data-code='full-stack-camp', name='email', value!='#{userinfo.email}', data-pass-id='539eb0faed232eda38000006', data-must='true')
+                br
+
+                label.h6 手機號碼
+                p 格式範例：0956-590-990
+                .form-group(class!='<%= errfor.mobile ? "has-error" : "" %>')
+                  input.form-control(type='text', data-code='full-stack-camp', name='phone', data-pass-id='539eb0faed232eda38000006', data-must='true')
+                br
+
+                label.h6 公司名稱（或學校名稱）
+                .form-group(class!='<%= errfor.company ? "has-error" : "" %>')
+                  input.form-control(type='text', data-code='full-stack-camp', name='company', data-pass-id='539eb0faed232eda38000006')
+                br
+
+                label.h6 職稱（學生或無職稱者免填）
+                .form-group(class!='<%= errfor.title ? "has-error" : "" %>')
+                  input.form-control(type='text', data-code='full-stack-camp', name='title', data-pass-id='539eb0faed232eda38000006')
+                br
+
+                button.btn.btn-save.btn-primary(type='button') 
+                  | 送出報名表
+                br
+                |<% } %>
+            else
+              p 請先
+                a(href='/login?returnUrl=/events/android-wear-sdk') 登入會員
+                | 。還不是會員？
+                a(href='/signup?returnUrl=/events/android-wear-sdk') 加入會員
+                | 。
+              p 登入會員後，可以更方便地完成報名。

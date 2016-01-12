@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>IPTV Demo</title>
+    <!-- Loading Bootstrap -->
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+    <!-- Loading IPTV -->
+    <link rel="stylesheet" href="../css/iptv.min.css" type="text/css">
+</head>
+<script>
+// This should be returned from IPTV service API
+var _src = [
+    // Demo: streaming webm video at local
+    { type: "video/webm", src: "http://static.moko365.com/movie/files/tears_of_steel_1080p.webm" },
+];
+</script>
+<body>
+
+<div class="container">
+    <div class="row video-control-buttons">
+        <div class="span3 iptv-button" data-color="red">
+          <div class="btn btn-large btn-block btn-danger iptv-button-title">Play Video</div>
+        </div>
+        <div class="span3 iptv-button" data-color="yellow">
+          <div class="btn btn-large btn-block btn-warning iptv-button-title">Pause Video</div>
+        </div>
+        <div class="span3 iptv-button" data-color="green">
+          <div class="btn btn-large btn-block btn-success iptv-button-title">Full Screen</div>
+        </div>
+        <div class="span3 iptv-button" data-color="blue">
+          <div class="btn btn-large btn-block btn-info iptv-button-title">Share</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span8 demo-video">
+            <video id="iptv_player" controls class="video-js vjs-default-skin" width="620" height="420">
+                <track kind="subtitles" src="../vtt/TOS-en.vtt" srclang="en" label="English"></track>
+                <track kind="subtitles" src="../vtt/TOS-JP.vtt" srclang="jp" label="Japanese"></track>
+            </video>
+        </div> <!-- /video -->
+        <div class="span4 iptv-controller-token">
+        </div>
+    </div>
+</div> <!-- /container -->
+
+    <!-- Load JS here for greater good =============================-->
+    <!-- SDK -->
+    <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
+    <script src="../js/h762plus.prototype.js" type="text/javascript"></script>
+    <script src="../js/video.js"></script>
+    <script src="../js/qrcode.js"></script>
+    <script src="../js/jquery.videoplayer.js" type="text/javascript"></script>
+    <script src="../js/main.js"></script>
+    <script src="../buttons/video.json.js"></script>
+
+</html>
