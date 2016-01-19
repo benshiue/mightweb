@@ -105,7 +105,7 @@ exports = module.exports = function(app, passport) {
     app.get('/contact', require('./views/contact/index').init);
     app.get('/training/:course', require('./views/training').init);
     app.get('/test', require('./views').calendar);
-
+    app.post('/email', require('./views/email/index').create);
     //route not found
     app.all('*', require('./views/http/index').http404);
 };
